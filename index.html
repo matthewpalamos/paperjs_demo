@@ -189,6 +189,7 @@
     var newCircle = new Path.Circle(point, 500)
     newCircle.fillColor = keyData[event.key].color;
     keyData[event.key].sound.play();
+    circles.push(newCircle);
     }
   }
 
@@ -199,6 +200,7 @@
     if(circles[i].area < 1){
       circles[i].remove();
       circles.splice(i, 1);
+      console.log(circles);
     }
   }
 }
